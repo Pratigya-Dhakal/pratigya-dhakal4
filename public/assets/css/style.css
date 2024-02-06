@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/* Nav CSS */
+
+.cv-button{
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #ad9551;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+    background-color: #9b7e2e;
+    border: 1px solid #ad9551;
+
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    padding-top: 10px;
+}
+
+.nav > .nav-header {
+    display: inline;
+
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    width: 15px;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    position:absolute;
+    right:0;
+    font-size: 18px;
+    padding: 0px 40px ;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+    color: #ad9551;
+}
+
+.nav > #nav-check {
+    display: none;
+    margin: 0px 40px ;
+}
+
+@media (max-width:768px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        margin: 30px 40px 10px 10px ;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 20px;
+        height: 7px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        background-color: #333;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 60px;
+        right: 0px;
+        width: 50%;
+        padding: 0px 30px ;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: fit-content;
+        overflow-y: auto;
+        padding: 30px;
+    }
+}
+
+/* HOME CSS */
+.intro-image img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+}
+.home {
+    height: 100vh;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    color: rgb(255, 255, 255);
+}
+.intro .social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.intro-text {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.intro-text span {
+    font-size: 1.2rem;
+    color: #e0dbce;
+
+}
+
+.hero-text {
+    font-size: 3rem;
+    font-weight: 400px;
+    margin: 0.5rem 0;
+    color: #ad9551;
+
+}
+
+p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+}
+
+#animated-text {
+    color: #e0dbce;
+}
+
+/* About Me CSS */
+
+#about {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+
+}
+#about .title {
+    color: #242426; /* Set the color for the title */
+}
+
+#about .subtitle {
+    color: #32302e; /* Set the color for the subtitle */
+}
+#about p{
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1c1c1c;
+}
+.subtitle {
+    font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1200 - 320)));
+    opacity: .8;
+}
+.title {
+    font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1200 - 320)));
+}
+
+@media (min-width: 992px) {
+.title {
+    font-size: 28px;
+}
+}
+@media (min-width: 992px) {
+    .subtitle {
+        font-size: 15px;
+    }
+}
+
+/* Projects css  */
+#projects {
+    height: 100%;
+
+}
+#projects .title {
+    padding: 20px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.slider{
+    max-width: 1100px;
+    display: flex;
+    margin: auto;
+    place-items: center;
+    text-align: center;
+    align-items: center;
+}
+.slider .card{
+    flex: 1;
+    margin: 0 10px;
+    background: #fff;
+}
+.slider .card .card-img{
+    height: 350px;
+    width: 100%;
+}
+.slider .card .card-img img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+}
+.slider .card .content{
+    align-items: center;
+    text-align: center;
+    padding: 0px 20px;
+}
+.card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.card .content p{
+    text-align: justify;
+    margin: 10px 0;
+}
+.card .content .visit-btn{
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
+.card .content .visit-btn button{
+    background: #ad9551;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.card .content .visit-btn button:hover{
+    transform: scale(0.9);
+}
+
+/* Skills CSS */
+.skills {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    margin: auto;
+}
+
+.skills .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skills h2 {
+    color: #000000;
+    font-size: 2.5rem;
+}
+
+.skills span {
+    color: #ad9551;
+}
+
+.skills .text {
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.skills .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0px;
+
+}
+
+.skills .item {
+    width: 100%;
+    max-width: 300px;
+    margin: 30px 60px;
+
+}
+
+.skills .item-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.skills .item-text span:last-child {
+    color: #333;
+}
+
+.skills .progress {
+    background-color: #ccc;
+    border-radius: 10px;
+    height: 16px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.skills .progress-bar {
+    height: 100%;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.skills .progress-bar.w-55 {
+    width: 55%;
+    background-color: #ad9551;
+}
+
+.skills .progress-bar.w-75 {
+    width: 75%;
+    background-color: #ad9551;
+}
+
+.skills .progress-bar.w-85 {
+    width: 85%;
+    background-color: #ad9551;
+}
+
+.skills .progress-bar.w-80 {
+    width: 80%;
+    background-color: #ad9551;
+}
+
+.skills .progress-bar.w-60 {
+    width: 60%;
+    background-color: #ad9551;
+}
+
+.skills .progress-bar.w-68 {
+    width: 68%;
+    background-color: #ad9551;
+}
+
+.skills .progress-bar.w-90 {
+    width: 90%;
+    background-color: #ad9551;
+}
+
+/* Contact Me CSS */
+.contact {
+    padding: 90px 0;
+    background-color: #222222;
+}
+
+.contact .heading h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+.contact .heading h2 span {
+    color: #ad9551;
+}
+
+.contact .heading p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 60px;
+    padding: 0;
+}
+
+.contact .form-control {
+    padding: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 0;
+    border-radius: 10px;
+}
+
+.contact button.btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    background: #ad9551;
+    color: #ffffff;
+}
+
+.contact .title h3 {
+    font-size: 18px;
+    font-weight:400;
+}
+
+.contact .title p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0 0 40px;
+}
+
+.contact .content .info {
+    color: #ffffff;
+    margin-top: 30px;
+}
+.contact .content .info i {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    color: #02434b;
+    margin-right: 20px;
+    text-align: center;
+    width: 20px;
+}
+.contact .content .info h4 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact .content .info h4 span {
+    font-size: 18px;
+    font-weight: 300;
+    color: #999999;
+}
+.title{
+    color: #ffffff;
+}
+.heading{
+    color: #ffffff;
+
+}
+.social-links{
+    display: flex;
+    justify-content: left;
+}
+.social-links a{
+    color: #e7e7e7;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 1.5rem 0.5rem;
+}
+.social-links a:hover{
+    background: #ad9551;
+}
+/* Footer CSS */
+
+.footer-text {
+    background-color: #222222;
+    color: #c5c4c4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .slider{
+        max-width: 380px;
+        display: flex;
+        margin: auto;
+        place-items: center;
+        text-align: center;
+        place-items: center;
+    }
+}

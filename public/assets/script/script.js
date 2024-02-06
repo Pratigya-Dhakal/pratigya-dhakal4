@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function downloadCv() {
-    var fileName = 'CV.pdf';
+    var fileName = 'PratigyaDhakalCV.pdf';
     var pdfPath = '/assets/images/' + fileName;
 
     var downloadLink = document.createElement('a');

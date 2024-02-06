@@ -1,14 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 body {
     font-family: 'Arial', sans-serif;
-
-    max-width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ad9551;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius:50%;
+    }
+
+    #myBtn:hover {
+        background-color: #a7821c;
+    }
 /* Nav CSS */
 
 .cv-button{
@@ -31,7 +43,7 @@ body {
     width: 100%;
     background-color: transparent;
     position: relative;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 .nav > .nav-header {
